@@ -1,0 +1,11 @@
+{
+  "provider": "external-judge-api",
+  "base_url": "https://judge.example.com",
+  "path": "/v1/evaluate",
+  "timeout_ms": 60000,
+  "auth_header_name": "Authorization",
+  "auth_token_env_var": "JUDGE_API_TOKEN",
+  "retry_count": 1,
+  "retry_backoff_ms": 1000,
+  "verify_tls": true
+}

@@ -1,0 +1,12 @@
+{
+  "agentId": "custom-judge-agent",
+  "model": "<lightweight-agent-model>",
+  "sandbox": "require",
+  "taskPrompt": "Run `python3 runner.py --workspace-root . --bundle-root judge_input` from the custom-judge skill directory. Do not score locally.",
+  "attachments": [
+    {
+      "name": "judge_input",
+      "sourcePath": "artifacts/judge_inputs/<run_id>__<question_id>/judge_input"
+    }
+  ]
+}
