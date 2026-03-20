@@ -1,7 +1,0 @@
-{
-  "provider": "external-judge-api",
-  "base_url": "https://llmapi.paratera.com",
-  "api_key": "sk-Pgbl4ErCbwTFYoxFEbRuQQ",
-  "model": "GLM-5",
-  "timeout_ms": 60000
-}
