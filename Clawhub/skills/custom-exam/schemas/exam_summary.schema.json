@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "custom-exam/exam_summary.schema.json",
+  "title": "ExamSummaryArtifact",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "exam_id",
+    "run_id",
+    "version",
+    "question_ids",
+    "answers",
+    "artifact_paths",
+    "metadata"
+  ],
+  "properties": {
+    "exam_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "question_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "answers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "run_id",
+          "question_id",
+          "answer_artifact_path"
+        ],
+        "properties": {
+          "run_id": {
+            "type": "string"
+          },
+          "question_id": {
+            "type": "string"
+          },
+          "answer_artifact_path": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "completed",
+              "skipped",
+              "error"
+            ]
+          }
+        }
+      }
+    },
+    "artifact_paths": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "summary_path": {
+          "type": "string"
+        },
+        "answers_root": {
+          "type": "string"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "started_at": {
+          "type": "string"
+        },
+        "completed_at": {
+          "type": "string"
+        },
+        "runner": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

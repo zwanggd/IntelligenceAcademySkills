@@ -1,0 +1,86 @@
+{
+  "exam_id": "custom_exam_v1",
+  "version": "v1",
+  "description": "Fixed 5-question exam for D1-D5 dimensions.",
+  "question_ids": [
+    "d1_reasoning_v1",
+    "d2_retrieval_v1",
+    "d3_creation_v1",
+    "d4_execution_v1",
+    "d5_orchestration_v1"
+  ],
+  "questions": {
+    "d1_reasoning_v1": {
+      "dimension": "D1 reasoning",
+      "weights": {
+        "hard": 6,
+        "soft": 14,
+        "total": 20
+      }
+    },
+    "d2_retrieval_v1": {
+      "dimension": "D2 retrieval",
+      "weights": {
+        "hard": 10,
+        "soft": 10,
+        "total": 20
+      }
+    },
+    "d3_creation_v1": {
+      "dimension": "D3 creation",
+      "weights": {
+        "hard": 6,
+        "soft": 14,
+        "total": 20
+      }
+    },
+    "d4_execution_v1": {
+      "dimension": "D4 execution",
+      "weights": {
+        "hard": 12,
+        "soft": 8,
+        "total": 20
+      }
+    },
+    "d5_orchestration_v1": {
+      "dimension": "D5 orchestration",
+      "weights": {
+        "hard": 8,
+        "soft": 12,
+        "total": 20
+      }
+    }
+  },
+  "scoring_rules": {
+    "total_exam_score_max": 100,
+    "rounding": "nearest_int"
+  },
+  "score_caps": {
+    "d1_reasoning_v1": {
+      "hard_below": 3,
+      "total_cap": 10
+    },
+    "d2_retrieval_v1": {
+      "hard_below": 5,
+      "total_cap": 12
+    },
+    "d3_creation_v1": {
+      "hard_below": 3,
+      "total_cap": 10
+    },
+    "d4_execution_v1": {
+      "hard_below": 5,
+      "total_cap": 12
+    },
+    "d5_orchestration_v1": {
+      "hard_below": 5,
+      "total_cap": 12
+    }
+  },
+  "artifact_paths": {
+    "exam_answers": "artifacts/exam_answers/<run_id>__<question_id>.json",
+    "exam_summary": "artifacts/exam_runs/<run_id>__summary.json",
+    "judge_result_json": "artifacts/judge_results/<run_id>__<question_id>.json",
+    "judge_result_md": "artifacts/judge_results/<run_id>__<question_id>.md"
+  }
+}
