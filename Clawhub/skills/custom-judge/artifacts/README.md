@@ -1,6 +1,7 @@
 # Artifacts
 
 This folder stores outputs from `custom-judge`.
+These outputs are intended to be produced inside the dedicated judge workspace.
 
 ## Output paths
 
@@ -12,3 +13,5 @@ This folder stores outputs from `custom-judge`.
 ## Notes
 
 - Keep the same `run_id` used by the corresponding exam run.
+- In the recommended isolated path, outputs are written by `custom-judge-agent` after reading the attached `judge_input/` bundle.
+- If the main workflow needs these results, export or collect them explicitly after the child judge run completes.

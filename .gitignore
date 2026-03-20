@@ -201,6 +201,9 @@ cython_debug/
 .cursorignore
 .cursorindexingignore
 
+# Local judge secrets
+Clawhub/skills/custom-judge/configs/judge_provider.local.json
+
 # Marimo
 marimo/_static/
 marimo/_lsp/

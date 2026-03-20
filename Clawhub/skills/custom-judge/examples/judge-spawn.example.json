@@ -1,0 +1,11 @@
+{
+  "agentId": "custom-judge-agent",
+  "model": "<judge-model>",
+  "sandbox": "require",
+  "attachments": [
+    {
+      "name": "judge_input",
+      "sourcePath": "artifacts/judge_inputs/<run_id>__<question_id>/judge_input"
+    }
+  ]
+}

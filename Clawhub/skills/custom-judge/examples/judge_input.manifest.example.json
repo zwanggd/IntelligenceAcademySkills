@@ -1,0 +1,32 @@
+{
+  "manifest_version": "v1",
+  "judge_version": "custom-judge-v1",
+  "exam_id": "custom_exam_v1",
+  "run_id": "run_2026_03_19_001",
+  "question_id": "d1_reasoning_v1",
+  "dimension": "D1 reasoning",
+  "source_answer_artifact": "artifacts/exam_answers/run_2026_03_19_001__d1_reasoning_v1.json",
+  "bundle_root": "judge_input",
+  "attachments_contract": {
+    "mode": "attachments_only",
+    "sandbox": "require"
+  },
+  "weights": {
+    "hard": 6,
+    "soft": 14,
+    "total": 20
+  },
+  "score_cap": {
+    "enabled": true,
+    "hard_below": 3,
+    "total_cap": 10
+  },
+  "expected_output_paths": {
+    "judge_result_json": "artifacts/judge_results/run_2026_03_19_001__d1_reasoning_v1.json",
+    "judge_result_md": "artifacts/judge_results/run_2026_03_19_001__d1_reasoning_v1.md"
+  },
+  "metadata": {
+    "reference_included": true,
+    "notes": "Copy weights and caps from custom-exam/configs/exam_v1.json when building the bundle."
+  }
+}
